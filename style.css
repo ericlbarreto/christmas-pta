@@ -71,14 +71,17 @@ h3 {
 }
 
 #presentes {
+    margin: auto;
     padding: 24px 180px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-column-gap: 3rem;
     grid-row-gap: 3rem;
+    max-width: 1200px;
 }
 
 .presente {
+    position: relative;
     padding: 2rem;
     background-color: #fff;
     height: 250px;
@@ -86,6 +89,17 @@ h3 {
     border-radius: 16px;
     cursor: pointer;
     box-shadow: 0 0 2.4rem .3rem rgba(0, 0, 0, 0.1);
+}
+
+.presente:after {
+    content: "";
+    background-image: url(./img/bx-heart.svg.svg);
+    background-repeat: no-repeat, no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: .25rem;
 }
 
 .presente img {
