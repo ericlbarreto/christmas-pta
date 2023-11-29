@@ -10,7 +10,23 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 24px 12%;
+    position: relative;
 }
+
+nav {
+    margin-left: auto;
+}
+
+
+.nav-icon-container img {
+    margin-left: 36px;
+}
+
+#nav-icon-light{
+    opacity: 0;
+    margin-left: -36px;
+}
+
 
 header > nav > a{
     transition: .3s;
@@ -129,6 +145,33 @@ h3 {
         justify-content: center;
         grid-template-columns: repeat(2, auto);
         max-width: 600px;
+    }
+}
+
+@media screen and (max-width:800px){
+    #nav-icon-light{
+        opacity: 1;
+        margin-left: 36px;
+    }
+
+    nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.1);
+        text-align: center;
+        top: 0;
+        width: 76%;
+        padding: 2rem;
+        
+    }
+
+    nav a {
+        margin-bottom: 1rem;
+    }
+
+    header nav a {
+        margin-left: 0;
     }
 }
 
