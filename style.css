@@ -5,10 +5,29 @@
     padding: 0;
 }
 
+:root{
+    --button-color: #D42B39;
+    --button-hover: #DC3845;
+    --background: #fff;
+    --title-color: #282525;
+    --text-color: #5D5656;
+    --container-color: #fff;
+    --light-dark-icon: url(img/bx-moon.svg.png);
+}
+
+.dark{
+    --button-color: #D42B39;
+    --button-hover: #DC3845;
+    --background: #251819;
+    --title-color: #F3F2F2;
+    --text-color: #C2BDBD;
+    --container-color: #2F2223;
+    --light-dark-icon: url(img/bx-sun.svg);
+}
 
 
 header {
-    background-color: #fff;
+    background-color: var(--background);
     display: flex;
     justify-content: space-between;
     padding: 24px 12%;
@@ -38,7 +57,7 @@ nav {
 
 header > nav > a{
     transition: .3s;
-    color: #282525;
+    color: var(--title-color);
     margin-left: 36px ;
     text-decoration: none;
     font-weight: 600;
@@ -51,10 +70,11 @@ header > nav > a:hover{
 }
 
 header > nav > a:nth-child(1) {
-    color: #D42B39;
+    color: var(--button-color);
 }
 
 #inicio {
+    background-color: var(--background);
     justify-content: center;
     display: flex;
     padding: 24px 15%;
@@ -62,6 +82,7 @@ header > nav > a:nth-child(1) {
 }
 
 h1, h2 {
+    color: var(--title-color);
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
@@ -71,6 +92,7 @@ h3 {
 }
 
 .content > p {
+    color: var(--text-color);
     font-size: 1rem;
     margin-bottom: 40px;
     max-width: 40rem;
@@ -78,7 +100,7 @@ h3 {
 
 .button {
     transition: .3s;
-    background-color: #D42B39;
+    background-color: var(--button-color);
     color: #fff;
     text-decoration: none;
     padding: 20px;
@@ -87,10 +109,12 @@ h3 {
 
 .button:hover {
     transition: .3s;
-    background-color: #DB4D59;
+    background-color: var(--button-hover);
 }
 
 #presente {
+    background-color: var(--background);
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -107,7 +131,7 @@ h3 {
 .presente {
     position: relative;
     padding: 2rem;
-    background-color: #fff;
+    background-color: var(--container-color);
     height: 15.625rem;
     width: 13.75rem;
     border-radius: 16px;
@@ -131,6 +155,7 @@ h3 {
 }
 
 .presente h3, p {
+    color: var(--title-color);;
     text-align: left;
 }
 
@@ -169,7 +194,7 @@ h3 {
         position: absolute;
         display: none;
         flex-direction: column;
-        background-color: #fff;
+        background-color: var(--container-color);
         text-align: center;
         top: 0;
         left: 0;
@@ -198,6 +223,9 @@ h3 {
 
     header nav a {
         margin-left: 0;
+    }
+    header > nav > a:nth-child(2n-1) {
+        color: var(--button-color);
     }
 }
 
