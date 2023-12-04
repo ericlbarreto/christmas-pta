@@ -271,6 +271,7 @@ h3 {
         grid-column-gap: 90%;
         grid-row-gap: 1%;
         max-width: 250px;
+        margin-left: 4%;
     }
 
     .button{
